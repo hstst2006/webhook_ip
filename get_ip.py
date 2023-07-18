@@ -20,7 +20,7 @@ while(attempts < 300):
     except:
         pass
 
-    #Read the socket's own address, if there is no address sleep and loop again
+    #Read the socket's own address, if there is no address, sleep and loop again
     #Else POST ip to webhook
     my_IP = s.getsockname()[0]
 
