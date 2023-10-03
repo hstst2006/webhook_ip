@@ -6,7 +6,7 @@ My Raspberry Pi is not connected to a screen or keyboard, and has a dynamic IP a
 I use this script to post the IP of the device to a webhook in case the IP changes.
 
 ## What it does
-It obtains the local IP-address by attempting to connect to an arbitrary IP address, and then obtains the local IP of the device once it has established network connection. The script attempts a new connection every second for 5 minutes.
+It obtains the local IP-address by attempting to connect to an arbitrary IP address, and then obtains the local IP of the device once it has established network connection. The script attempts a new connection every second for at most 5 minutes, or until it obtains a connection.
 
 ## Running the script on boot
 I have run into issues using scripts in /etc/network/if-up.d/ and have therefore opted to run this script with crontab
